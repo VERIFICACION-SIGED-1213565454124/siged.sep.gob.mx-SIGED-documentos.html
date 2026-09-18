@@ -1,27 +1,26 @@
-/* Color guinda exacto extraído de la imagen (#380408) */
 :root {
-    --color-guinda: #380408;
+    --color-guinda: #380408;       /* Fondo guinda de las capturas */
+    --color-titulo: #0B192C;       /* Azul marino oscuro / negro estilizado de la muestra */
+    --color-texto: #222222;
     --color-fondo: #ffffff;
-    --color-negro: #000000;
 }
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    /* Misma tipografía para todo el documento */
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Montserrat', sans-serif; /* Tipografía idéntica a la imagen */
 }
 
 body {
     background-color: var(--color-fondo);
-    color: var(--color-negro);
+    color: var(--color-texto);
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
-/* Header con color guinda */
+/* Header */
 .header {
     background-color: var(--color-guinda);
     color: #ffffff;
@@ -43,10 +42,10 @@ body {
 
 .header-title {
     font-size: 1.2rem;
-    font-weight: normal;
+    font-weight: 500;
 }
 
-/* Contenedor principal */
+/* Contenedor Principal */
 .main-container {
     flex: 1;
     max-width: 800px;
@@ -58,28 +57,36 @@ body {
     background: #ffffff;
 }
 
-/* TEXTO "Certificado Electrónico": 
-   Exactamente igual en estilo, color y fuente que el texto de abajo */
-.titulo-limpio {
-    color: var(--color-negro);
-    font-size: 1.1rem;
-    font-weight: normal !important; /* Fuerza que no tenga negrita */
+/* Estilo exacto de los títulos superiores según la muestra */
+.titulo-principal {
+    color: var(--color-titulo);
+    font-size: 1.35rem;
+    font-weight: 500;
+    line-height: 1.45;
     margin-bottom: 25px;
-    background: none;
-    border: none;
-    padding: 0;
 }
 
-/* Párrafo de descripción con la misma fuente y color */
+/* Título de "Detalles del Documento" con la línea inferior fina */
+.subtitulo-documento {
+    color: var(--color-titulo);
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+    border-bottom: 1.5px solid #1a1a1a; /* Línea horizontal inferior */
+}
+
+/* Texto de descripción */
 .description {
-    font-size: 1.1rem;
-    line-height: 1.5;
-    color: var(--color-negro);
-    font-weight: normal;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--color-texto);
     margin-bottom: 30px;
+    font-weight: 400;
 }
 
-/* Lista de datos */
+/* Tabla / Lista de datos */
 .info-grid {
     display: flex;
     flex-direction: column;
@@ -93,18 +100,18 @@ body {
 }
 
 .label {
-    font-weight: normal;
-    font-size: 1rem;
-    color: var(--color-negro);
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--color-titulo);
 }
 
 .value {
-    font-weight: normal;
-    color: var(--color-negro);
-    font-size: 1rem;
+    font-weight: 400;
+    color: var(--color-texto);
+    font-size: 0.95rem;
 }
 
-/* Pie de página con el fondo guinda exacto */
+/* Footer con el color guinda exacto */
 .footer {
     background-color: var(--color-guinda);
     color: #ffffff;
@@ -128,7 +135,7 @@ body {
 
 .footer h3 {
     font-size: 1.1rem;
-    font-weight: normal;
+    font-weight: 500;
     color: #ffffff;
     margin-bottom: 12px;
 }
@@ -144,8 +151,8 @@ body {
 .footer a {
     color: #ffffff;
     text-decoration: none;
-    font-size: 1rem;
-    font-weight: normal;
+    font-size: 0.95rem;
+    font-weight: 400;
 }
 
 .footer a:hover {
@@ -153,7 +160,7 @@ body {
 }
 
 .footer p {
-    font-size: 1rem;
+    font-size: 0.95rem;
     color: #ffffff;
-    font-weight: normal;
+    font-weight: 400;
 }
